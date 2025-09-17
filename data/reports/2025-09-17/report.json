@@ -1,0 +1,9 @@
+{
+    "avg_temp_last7d": 18.51225806451613,
+    "avg_temp_by_daynight": {
+        "Night": 16.434285714285714,
+        "Day": 20.223529411764705
+    },
+    "days_below_1000mmHg": 8,
+    "hours_temp_apparent_greater_actual": 12
+}
