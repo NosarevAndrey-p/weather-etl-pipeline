@@ -99,6 +99,32 @@ Example:
 python src/main.py -d 2025-09-15 -fd -fr
 ```
 
+## Screenshots
+
+### Pipeline Run Result (Folder Structure)
+
+![Pipeline Run](docs/screenshots/run_result.png)
+
+### Database Structure
+
+![Database Structure](docs/screenshots/db_structure.png)
+
+### Database Data
+
+![Database Data](docs/screenshots/db_data.png)
+
+### Raw API Response
+
+![Raw API Response](docs/screenshots/raw.png)
+
+### Processed Data (Parquet)
+
+![Processed Data](docs/screenshots/processed.png)
+
+### Report JSON
+
+![Report](docs/screenshots/report.png)
+
 ## Dependencies
 
 * `requests`
@@ -115,3 +141,16 @@ python src/main.py -d 2025-09-15 -fd -fr
 * Raw API responses are saved in `data/raw/YYYY-MM-DD/response.json`.
 * Transformed data is saved in Parquet format under `data/processed/YYYY-MM-DD/response.parquet`.
 * Report is saved in JSON format under `data/reports/YYYY-MM-DD/report.json`.
+
+
+
+
+
+
+
+
+
+
+
+
+
