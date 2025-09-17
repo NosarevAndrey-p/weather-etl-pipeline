@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine, text, inspect
-
+import argparse
 
 
 def extract(today_date, force_download=False):
@@ -203,4 +203,28 @@ def etl_pipeline(
 
 
 if __name__ == "__main__":
-    etl_pipeline()
+    parser = argparse.ArgumentParser(description="Run the ETL weather pipeline.")
+    parser.add_argument(
+        "-d", "--run_date",
+        type=str,
+        default="",
+        help="Optional run date in YYYY-MM-DD format (defaults to today).",
+    )
+    parser.add_argument(
+        "-fd", "--force_download",
+        action="store_true",
+        help="Force re-downloading raw data.",
+    )
+    parser.add_argument(
+        "-fr", "--force_recreate",
+        action="store_true",
+        help="Force recreating the database table.",
+    )
+
+    args = parser.parse_args()
+
+    etl_pipeline(
+        run_date=args.run_date,
+        force_download=args.force_download,
+        force_recreate=args.force_recreate,
+    )
